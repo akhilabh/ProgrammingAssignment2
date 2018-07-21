@@ -8,8 +8,7 @@
          get <- function() x
          createInverse <- function(inverse) Inverses <<- inverse
          pullInverse <- function()Inversesinv
-         list(set = set,
-              get = get,
+         list(
               createInverse = createInverse,
               pullInverse = pullInverse)
  }
@@ -22,8 +21,6 @@
                  message("getting cached data")
                  return(Inverses)
          }
-         mat <- x$get()
-         inv <- solve(mat, ...)
          x$createInverse(Inverses)
          Inverses
  }
